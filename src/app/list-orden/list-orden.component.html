@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        # Folio
+      </th>
+      <th>
+        Pizza
+      </th>
+      <th>
+        Ingredientes
+      </th>
+      <th>
+        Nombre del cliente
+      </th>
+      <th>
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let orden of ordenS.observableList | async">
+      <td>{{orden.getValue().folio}}</td>
+      <td>{{orden.getValue().pizza.name}}</td>
+      <td *ngIf="orden.getValue().status===0">
+      </td>
+      <td *ngIf="orden.getValue().status>0">
+        {{parseIngredientes(orden.getValue().pizza.ingredientes)}}
+      </td>
+      <td>{{orden.getValue().nombreCliente}}</td>
+      <td>{{Status[orden.getValue().status]}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,12 @@
+<p>
+  Nueva orden
+</p>
+<form>
+  <div>Nueva orden {{folio}}</div>
+  <input type="text" placeholder="Nombre del cliente" [(ngModel)]="orden.nombreCliente" name="nombreCliente">
+  <span>Tipo de pizza: </span>
+  <select [(ngModel)]="orden.t_pizza" name="t_pizza">
+    <option *ngFor="let t_pizza of TIPOS_PIZZA" [value]="t_pizza">{{t_pizza}}</option>
+  </select>
+  <button (click)="pedirOrden()">Pedir orden</button>
+</form>
