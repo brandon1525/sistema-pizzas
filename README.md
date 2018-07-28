@@ -1,4 +1,4 @@
-# Lagranpizza
+# Sistema de simulación pedidos de la pizzeria "La gran pizza"
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
