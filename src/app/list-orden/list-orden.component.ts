@@ -11,7 +11,7 @@ import { Ingrediente } from '../clases/ingrediente';
 export class ListOrdenComponent implements OnInit {
   Status = Status;
 
-  constructor(private ordenS: OrdenService) { }
+  constructor(public ordenS: OrdenService) { }
 
   ngOnInit() {
   }
